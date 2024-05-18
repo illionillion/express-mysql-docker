@@ -10,10 +10,10 @@ router.get('/', async function(req, res, next) {
     const query =
       'select user_id, user_name, display_name, test_day from users';
     const [result] = (await connection.execute(query))
-    res.json({users: result});
+    res.status(200).json({users: result});
   } catch (error) {
     console.error('getUser error:', error);
-    res.send('Error');
+    res.status(500).send('Error');
   } finally {
     if (connection) connection.destroy();
   }
