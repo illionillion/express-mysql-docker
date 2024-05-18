@@ -5,7 +5,6 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', async function(req, res, next) {
   let connection;
-  console.log(mysql_connection);
   try {
     connection = await mysql_connection();
     const query =
