@@ -9,7 +9,6 @@ MYSQL_PASSWORD=password
 MYSQL_DATABASE=my_db
 EXPRESS_PORT=8080
 ADMIN_PORT=9090
-API_KEY=your-api-key
 ```
 
 2. 必要なライブラリをインストール
@@ -28,4 +27,24 @@ docker compose up -d
 
 ```bash
 docker compose down
+```
+
+# その他操作
+
+- コンテナ一覧表示
+
+```bash
+docker ps
+```
+
+- コンテナのログ表示
+
+```bash
+docker logs -f コンテナ名
+```
+
+- コンテナの中に入る
+
+```bash
+docker exec -it コンテナ名 bash
 ```
