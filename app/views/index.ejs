@@ -63,6 +63,13 @@
         <div class="text-center">
           <input type="submit" value="送信" class="btn btn-primary" />
         </div>
+        <div class="py-2">
+          <% if (status === "success") { %>
+          <div class="alert alert-success" role="alert">成功しました。</div>
+          <% } else if(status === "error") { %>
+          <div class="alert alert-danger" role="alert">失敗しました。</div>
+          <% } %>
+        </div>
       </form>
     </div>
   </body>
